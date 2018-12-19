@@ -14,6 +14,6 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
-it('This one should fail', () => {
-  expect(1).to.be.equal(2);
-});
+// it('This one should fail', () => {
+//   expect(1).to.be.equal(2);
+// });
