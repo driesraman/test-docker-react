@@ -1,0 +1,14 @@
+# Indicate to Travis CI that we need root permissions
+sudo: required
+
+# Tell Travis which services we need
+services:
+  - docker
+
+# Steps to launch before running the tests
+before_install:
+  - docker build -t driesraman/test-docker-react -f Dockerfile.dev .
+
+# Commands needed to run the testsuite
+script:
+  - docker run driesraman/test-docker-react npm run test -- --coverage
