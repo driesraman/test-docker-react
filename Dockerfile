@@ -28,5 +28,8 @@ RUN npm run build
 # The "FROM" statement ends the 1st phase
 FROM nginx
 
+# Instruction for AWS Elastic BeansTalk
+EXPOSE 80
+
 # Copy from the 1st phase
 COPY --from=builder /usr/app/build /usr/share/nginx/html
